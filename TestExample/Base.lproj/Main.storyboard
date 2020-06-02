@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hd1-yj-Zbt">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="DvE-vQ-BZ1">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HWv-A0-22O" customClass="LoginViewController" customModule="TestExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ie-eu-Jxe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHa-qZ-s8e">
+                                <rect key="frame" x="83.5" y="269" width="153" height="30"/>
+                                <state key="normal" title="LOGIN WITH GOOGLE"/>
+                                <connections>
+                                    <action selector="googleAct:" destination="HWv-A0-22O" eventType="touchUpInside" id="qfX-5X-zkD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qat-es-ut1">
+                                <rect key="frame" x="83.5" y="331" width="153" height="30"/>
+                                <state key="normal" title="LOGIN WITH APPLE "/>
+                                <connections>
+                                    <action selector="appleAct:" destination="HWv-A0-22O" eventType="touchUpInside" id="mS8-bC-40K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XP-tF-Pcy">
+                                <rect key="frame" x="71" y="216" width="178" height="30"/>
+                                <state key="normal" title="LOGIN WITH MICROSOFT"/>
+                                <connections>
+                                    <action selector="callGraphAPI:" destination="HWv-A0-22O" eventType="touchUpInside" id="KAb-Rx-Rp4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4XP-tF-Pcy" firstAttribute="centerX" secondItem="6ie-eu-Jxe" secondAttribute="centerX" id="0fc-H1-axm"/>
+                            <constraint firstItem="JHa-qZ-s8e" firstAttribute="top" secondItem="4XP-tF-Pcy" secondAttribute="bottom" constant="23" id="A7J-7d-PiQ"/>
+                            <constraint firstItem="qat-es-ut1" firstAttribute="leading" secondItem="JHa-qZ-s8e" secondAttribute="leading" id="Blc-v6-95r"/>
+                            <constraint firstItem="qat-es-ut1" firstAttribute="trailing" secondItem="JHa-qZ-s8e" secondAttribute="trailing" id="PqN-Rn-DYb"/>
+                            <constraint firstItem="JHa-qZ-s8e" firstAttribute="centerX" secondItem="6ie-eu-Jxe" secondAttribute="centerX" id="dOv-rr-WYx"/>
+                            <constraint firstItem="qat-es-ut1" firstAttribute="top" secondItem="JHa-qZ-s8e" secondAttribute="bottom" constant="32" id="gQ2-vO-tfT"/>
+                            <constraint firstItem="JHa-qZ-s8e" firstAttribute="centerY" secondItem="6ie-eu-Jxe" secondAttribute="centerY" id="imc-tz-MuW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ehO-SL-tQ9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JFn-eO-BTC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSy-Cu-GcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5163.75" y="98.239436619718305"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="29l-c6-xGH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Hd1-yj-Zbt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="15Y-Cy-5cK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HWv-A0-22O" kind="relationship" relationship="rootViewController" id="TYn-3X-ILm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIG-v1-LlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4166.25" y="98.239436619718305"/>
+        </scene>
+    </scenes>
+</document>
